@@ -83,7 +83,7 @@ function Db() {
 		const groupMessage = db.messages.filter(
 			(m) => m.id === messageId && m.groupId === groupId
 		);
-		return Promise.resolve(groupMessage);
+		return Promise.resolve(...groupMessage);
 	}
 
 	function getMembersByGroup(groupId) {
